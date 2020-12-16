@@ -2,13 +2,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { ItemsComponent } from './items/items.component';
+import {HttpClientModule} from '@angular/common/http';
+import { QuestionComponent } from './question/question.component';
+import { ScoreCardComponent } from './score-card/score-card.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ItemsComponent,
+    QuestionComponent,
+    ScoreCardComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

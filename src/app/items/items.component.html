@@ -1,0 +1,20 @@
+<div>
+  <ul>
+    <li *ngFor="let ans of itemsService.getCurrentItem().answers; let i = index">
+      <button class="rm" (click)="changeScore(1, ans.id)">&times;</button>
+      <span *ngIf="ans.completed">
+        <!--<input type = "checkbox" [checked]="ans.completed" (change)="onChangeItem(ans.id)">-->
+
+        {{ ans.answer }} &#91;{{ans.points}}&#93;
+      </span>
+      <span *ngIf="!ans.completed">
+        {{ ans.id }}
+      </span>
+      <button class="rm" (click)="changeScore(2, ans.id)">&times;</button>
+    </li>
+  </ul>
+
+<ng-template #answerHide>
+  {{<p style="text-align: center;">ans.id+1</p>}}
+</ng-template>
+</div>

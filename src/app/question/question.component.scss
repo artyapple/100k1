@@ -1,0 +1,33 @@
+.container {
+  position: relative;
+  border-radius: 5px;
+  padding: .5rem 1rem;
+  margin-bottom: .5rem;
+  display: flex;
+  justify-content: space-between;
+
+  input {
+    margin-right: 1rem;
+  }
+}
+
+.nxt {
+  $color: blue;
+  border-radius: 50%;
+  background: $color;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  width: 20px;
+  height: 20px;
+  transition: .3s all;
+  cursor: pointer;
+
+  &:hover{
+    background: darken($color, 20%);
+  }
+}
+
+.finished{
+  background-color: lawngreen;
+}

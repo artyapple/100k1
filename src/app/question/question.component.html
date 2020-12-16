@@ -1,0 +1,8 @@
+<div class="container" >
+  <button (click)="prev()">&lt;</button>
+  <h2>{{ itemsService.getCurrentItem().question }}</h2>
+  <button (click)="next()">&gt;</button>
+</div>
+<div class="container" >
+  <button [class.finished]="itemsService.getCurrentItem().completed" (click)="roundFinished(itemsService.getCurrentItem().id)">round finished</button>
+</div>
